@@ -4,6 +4,8 @@ server:
 accounts:
   datasource:
     url: jdbc:mysql://localhost:3306/account?serverTimezone=Europe/Warsaw&useSSL=false&allowPublicKeyRetrieval=true
-    username: cezaryjanicki
-    password: cezaryjanicki00
+    username: ${MYSQL_LOGIN}
+    password: ${MYSQL_PASSWORD}
     ddl-mode: update
+
+    allow-get-accounts: false
