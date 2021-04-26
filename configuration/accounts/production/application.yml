@@ -8,4 +8,4 @@ accounts:
     password: ${MYSQL_PASSWORD}
     ddl-mode: update
 
-    allow-get-accounts: false
+allow-get-accounts: false
