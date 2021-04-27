@@ -9,4 +9,4 @@ accounts:
     ddl-mode: update
 
 application:
-    allow-get-accounts: false
+    allow-get-accounts: true
