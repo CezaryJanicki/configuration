@@ -10,3 +10,12 @@ accounts:
 
 application:
     allow-get-accounts: true
+
+customers:
+  datasource:
+    url: jdbc:mysql://localhost:3306/customer?serverTimezone=Europe/Warsaw&useSSL=false&allowPublicKeyRetrieval=true
+    username: ${MYSQL_LOGIN}
+    password: ${MYSQL_PASSWORD}
+    ddl-mode: update
+
+  allow-get-customers: true
