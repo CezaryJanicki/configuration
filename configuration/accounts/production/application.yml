@@ -3,19 +3,37 @@ server:
 
 accounts:
   datasource:
+    driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/account?serverTimezone=Europe/Warsaw&useSSL=false&allowPublicKeyRetrieval=true
     username: ${MYSQL_LOGIN}
     password: ${MYSQL_PASSWORD}
-    ddl-mode: update
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      generate-ddl: true
 
 application:
     allow-get-accounts: true
 
 customers:
-  datasource:
-    url: jdbc:mysql://localhost:3306/customer?serverTimezone=Europe/Warsaw&useSSL=false&allowPublicKeyRetrieval=true
-    username: ${MYSQL_LOGIN}
-    password: ${MYSQL_PASSWORD}
-    ddl-mode: update
+    datasource:
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/account?serverTimezone=Europe/Warsaw&useSSL=false&allowPublicKeyRetrieval=true
+      username: ${MYSQL_LOGIN}
+      password: ${MYSQL_PASSWORD}
+    jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL8Dialect
+      database: mysql
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+        generate-ddl: true
 
-  allow-get-customers: true
+allow-get-customers: true
