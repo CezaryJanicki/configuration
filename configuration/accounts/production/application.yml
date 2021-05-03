@@ -19,6 +19,7 @@ accounts:
 
 application:
     allow-get-accounts: true
+    allow-get-customers: true
 
 customers:
     datasource:
