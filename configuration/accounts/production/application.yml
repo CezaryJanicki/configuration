@@ -36,5 +36,3 @@ customers:
       hibernate:
         ddl-auto: update
         generate-ddl: true
-
-allow-get-customers: true
