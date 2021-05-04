@@ -1,0 +1,15 @@
+cards:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/account?serverTimezone=Europe/Warsaw&useSSL=false&allowPublicKeyRetrieval=true
+    username: ${MYSQL_LOGIN}
+    password: ${MYSQL_PASSWORD}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      generate-ddl: true
